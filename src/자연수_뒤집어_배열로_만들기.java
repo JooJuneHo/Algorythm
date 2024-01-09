@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class A17 {
+public class 자연수_뒤집어_배열로_만들기 {
     public static void main(String[] args) {
         Solution17 solution = new Solution17();
         System.out.println(Arrays.toString(solution.solution(12345)));
