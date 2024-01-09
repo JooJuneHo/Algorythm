@@ -1,7 +1,7 @@
 public class 콜라츠_추측 {
     public static void main(String[] args) {
         Solution23 solution23 = new Solution23();
-        System.out.println(solution23.solution(1324));
+        System.out.println(solution23.solution(6));
     }
 }
 
