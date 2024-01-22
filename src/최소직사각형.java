@@ -12,15 +12,13 @@ class Solution44 {
         int maxLength=0;
         int maxHeight=0;
         for(int i=0; i< sizes.length; i++){
-            if(sizes[i][0] > maxLength){
-                maxLength = sizes[i][0];
-            }
-            if(sizes[i][1] > maxHeight){
-                maxHeight = sizes[i][1];
-            }
+            int v = Math.max(sizes[i][0], sizes[i][1]);
+            int h = Math.min(sizes[i][0], sizes[i][1]);
+            maxLength = Math.max(maxLength, v); //80
+            maxHeight = Math.max(maxHeight, h); //50
         }
 
 
-        return answer;
+        return answer = maxLength*maxHeight;
     }
 }
