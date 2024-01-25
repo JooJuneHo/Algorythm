@@ -6,24 +6,24 @@ import java.util.List;
 public class programmers{
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] arr = {1,2,3};
-        System.out.println(solution.solution(arr));
+        int price = 580000;
+        System.out.println(solution.solution(price));
     }
 }
 
 class Solution {
-    public int solution(int[] sides) {
+    public int solution(int price) {
         int answer = 0;
 
-        int max=0;
 
-        for(int i=0; i<sides.length; i++){
-            if(sides[i] > max){
-                max = sides[i];
-            }
+        if(price >= 500000){
+            price *= 0.8;
+        } else if(price >= 300000){
+            price *= 0.9;
+        } else if(price >= 100000){
+            price *= 0.95;
         }
 
-
-            return answer;
+        return price;
     }
 }
