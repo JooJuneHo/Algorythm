@@ -6,7 +6,6 @@ import java.util.List;
 public class 나누어_떨어지는_숫자_배열 {
     public static void main(String[] args) {
         Solution25 solution25 = new Solution25();
-
         int[] arr = {5,9,7,10};
         System.out.println(Arrays.toString(solution25.solution(arr, 5)));
 
