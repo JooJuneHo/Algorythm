@@ -30,7 +30,9 @@ class Solution57 {
 
         // 최대 점수를 가진 수포자 리스트 생성
         List<Integer> answ = new ArrayList<>();
-        for(int i=0; i<score.length; i++) if(max == score[i]) answ.add(i+1);
+        for(int i=0; i<score.length; i++)
+            if(max == score[i])
+                answ.add(i+1);
 
         int[] answer = new int[answ.size()];
         for(int i=0; i<answ.size(); i++){
