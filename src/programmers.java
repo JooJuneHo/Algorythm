@@ -3,12 +3,17 @@ import java.util.Arrays;
 public class programmers{
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(Arrays.toString(solution.solution(12345)));
+        int[] number = {-2,3,0,2,-5};
+        System.out.println(solution.solution(number));
+
     }
 }
 
 class Solution {
-    public int[] solution(long n) {
-        return new StringBuilder().append(n).reverse().chars().map(Character::getNumericValue).toArray();
+    public int solution(int[] number) {
+        int answer =0;
+
+
+        return answer;
     }
 }
