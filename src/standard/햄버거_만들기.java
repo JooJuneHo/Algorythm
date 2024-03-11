@@ -1,3 +1,5 @@
+package standard;
+
 import java.util.Stack;
 
 public class 햄버거_만들기 {

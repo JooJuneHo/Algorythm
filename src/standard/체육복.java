@@ -1,3 +1,5 @@
+package standard;
+
 import java.util.Arrays;
 
 public class 체육복 {

@@ -1,3 +1,5 @@
+package standard;
+
 public class 이웃한_칸 {
 
     public static void main(String[] args) {
