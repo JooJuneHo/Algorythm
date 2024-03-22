@@ -14,19 +14,6 @@ class SolutionSTD13 {
     public int solution(int[] citations) {
         int answer = 0;
 
-//        for(int i=0; i< citations.length; i++){
-//            int h = citations[i];
-//            int count=0;
-//            for(int num:citations){
-//                if(num>=h){
-//                    count++;
-//                }
-//            }
-//            if(count>=h){
-//                answer = Math.max(answer,h);
-//            }
-//        }
-
         Arrays.sort(citations);
 
         for(int i=0; i<citations.length; i++){
