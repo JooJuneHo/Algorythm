@@ -27,9 +27,7 @@ class PracSolution3 {
 
         for (int i = 0; i < photo.length; i++) {
             for (int j = 0; j < photo[i].length; j++) {
-                if (map.get(photo[i][j]) == null) {
-                    continue;
-                } else {
+                if (map.get(photo[i][j]) != null) {
                     answer[i] += map.get(photo[i][j]);
                 }
             }
