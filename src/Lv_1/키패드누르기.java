@@ -10,7 +10,7 @@ public class 키패드누르기 {
     }
 }
 
-class Solution10 {
+class Solution11 {
 
     public String solution(int[] numbers, String hand) {
         String answer = "";
