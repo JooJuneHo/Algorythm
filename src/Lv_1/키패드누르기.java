@@ -3,10 +3,10 @@ package Lv_1;
 public class 키패드누르기 {
 
     public static void main(String[] args) {
-        Solution10 solution10 = new Solution10();
+        Solution11 solution11 = new Solution11();
         int[] numbers = {1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5};
         String hand = "right";
-        System.out.println(solution10.solution(numbers, hand));
+        System.out.println(solution11.solution(numbers, hand));
     }
 }
 
