@@ -1,9 +1,9 @@
 package Lv_1;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class 데이터분석 {
@@ -21,50 +21,18 @@ public class 데이터분석 {
 class Solution13 {
 
     public int[][] solution(int[][] data, String ext, int val_ext, String sort_by) {
-        String[] dataArr = {"code", "date", "maximum", "remain"};
 
-        int sortByNum = 0;
-        int extNum = 0;
-        for (int i = 0; i < dataArr.length; i++) {
-            if (dataArr[i].equals(ext)) {
-                extNum = i;
-            }
-            if (dataArr[i].equals(sort_by)) {
-                sortByNum = i;
-            }
-        }
+        Map<String, Integer> colOrder = new HashMap<>();
+        colOrder.put("code", 0);
+        colOrder.put("date", 1);
+        colOrder.put("maximum", 2);
+        colOrder.put("remain", 3);
 
-        List<int[]> list = new ArrayList<>();
+        int[][] filteredData = Arrays.stream(data)
+            .filter(x -> x[colOrder.get(ext)] < val_ext).toArray(int[][]::new);
+        Arrays.sort(filteredData,
+            Comparator.comparingInt(o -> o[colOrder.get(sort_by)]));
 
-        for (int i = 0; i < data.length; i++) {
-            if (ext.equals("code")) {
-                if (data[i][extNum] < val_ext) {
-                    list.add(data[i]);
-                }
-            } else if (ext.equals("date")) {
-                if (data[i][extNum] < val_ext) {
-                    list.add(data[i]);
-                }
-            } else if (ext.equals("maximum")) {
-                if (data[i][extNum] < val_ext) {
-                    list.add(data[i]);
-                }
-            } else if (ext.equals("remain")) {
-                if (data[i][extNum] < val_ext) {
-                    list.add(data[i]);
-                }
-            }
-        }
-
-        final int si = sortByNum;
-        list.sort(Comparator.comparingInt(o -> o[si]));
-
-        int[][] answer = new int[list.size()][4];
-
-        for (int i = 0; i < list.size(); i++) {
-            answer[i] = list.get(i);
-        }
-
-        return answer;
+        return filteredData;
     }
 }
