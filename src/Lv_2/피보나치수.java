@@ -17,6 +17,6 @@ class Solution8 {
             answer[i] = (answer[i - 1] + answer[i - 2]) % 1234567;
         }
 
-        return answer[n] % 1234567;
+        return answer[n];
     }
 }
